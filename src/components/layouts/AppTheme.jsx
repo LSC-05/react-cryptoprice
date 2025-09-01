@@ -65,4 +65,9 @@ const theme = createTheme({
   },
 });
 
-export const AppTheme = (props) => <>{props.children}</>;
+export const AppTheme = (props) => (
+  <ThemeProvider>
+    <CssBaseline />
+    {props.children}
+  </ThemeProvider>
+);

@@ -4,7 +4,21 @@ import axios from 'axios';
 const APIURL = import.meta.env.VITE_APIURL;
 const APIKEY = import.meta.env.VITE_APIKEY;
 
-export const getSimplePrice = async () => {};
+export const getSimplePrice = async () => {
+  const endpoint = '/simple/price';
+  const url = APIURL + endpoint;
+
+  const params = {
+    ids: "bitcoin,tether,ethereum,litecoin,cardano,dogecoin,bnb",
+    vs_currency: 'jpy',
+    include_24hr_change: 'true',
+  };
+
+  const response = await axios.get(url, {
+    params,
+  });
+  return response.data;
+};
 
 export const getCoinMarket = async (coinName) => {
   const endpoint = '/coins/markets';
