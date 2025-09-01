@@ -21,8 +21,8 @@ const AboutListItem = styled(ListItem)(()=> ({
 }));
 
 export const Crypt = () => (
-  <Container maxWidth="md" sx={{ my: 5 }}>
-    <Stack direction="column" alignItems="center" p={2} gap={3} my={10}>
+  <Container maxWidth="md" sx={{ my: 2 }}>
+    <Stack direction="column" alignItems="center" p={2} gap={3} mb={10}>
       <Typography variant="h4" component="h2">
         暗号通貨について
       </Typography>
