@@ -10,7 +10,7 @@ export const getSimplePrice = async () => {
 
   const params = {
     ids: "bitcoin,tether,ethereum,litecoin,cardano,dogecoin,bnb",
-    vs_currency: 'jpy',
+    vs_currencies: 'jpy',
     include_24hr_change: 'true',
   };
 
@@ -33,5 +33,13 @@ export const getCoinMarket = async (coinName) => {
   const response = await axios.get(url, {
     params,
   });
+  return response.data;
+};
+
+export const getTrend = async () => {
+  const endpoint = '/search/trending';
+  const url = APIURL + endpoint;
+
+  const response = await axios.get(url,{})
   return response.data;
 };

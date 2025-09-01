@@ -17,10 +17,10 @@ export const InitData = () => {
         type: "save",
         payload: {
           data,
-        }
-      })
+        },
+      });
     })();
   },[]);
-  
+
   return;
 };
